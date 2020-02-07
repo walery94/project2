@@ -1,13 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Smart-Device</title>
+  <link rel="preload" href="fonts/roboto-medium.woff" as="font">
+  <link rel="preload" href="fonts/roboto-medium.woff2" as="font">
+  <link rel="preload" href="fonts/robotocondensed-regular.woff" as="font">
+  <link rel="preload" href="fonts/robotocondensed-regular.woff2" as="font">
+  <link rel="preload" href="fonts/robotocondensed-bold.woff" as="font">
+  <link rel="preload" href="fonts/robotocondensed-bold.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <header class="main-header">
+    <a class="logo" href="index.html">
+      <img src="image/circuit.svg" alt="Логотип Smart Device" width="52" height="52">
+      <p class="logo__slogan">Smart Device <span>умные технологии</span></p>
+    </a>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a class="navigation__email" href="mailto:info@sd.ru">info@sd.ru</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__phone" href="tel:+74950005252">+7 (495) 000 52 52</a>
+        </li>
+      </ul>
+      <a class="navigation__button button" href="#">Заказать звонок</a>
+    </nav>
+    <section class="banner">
+      <h1 class="banner__title">Печатные платы</h1>
+      <p class="banner__paragraph">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+      <a class="banner__consultation" href="#">
+        <span class="banner__consultation--desktop button">Получить бесплатную консультацию</span>
+        <span class="banner__consultation--mobile button">Бесплатная консультация</span>
+      </a>
+      <a class="banner__scroll-down" href="#">Скролл вниз</a>
+      <img src="image/Untitled12-desktop.jpg" alt="Баннер" width="705" height="515">
+    </section>
+  </header>
+  <main class="main">
+    <section class="advantages">
+      <h2 class="visually-hidden">Преимущества</h2>
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <h3 class="advantages__title">Оперативные сроки</h3>
+          <p class="advantages__paragraph">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">Полная конфиденциальность</h3>
+          <p class="advantages__paragraph">По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">Крупные поставщики</h3>
+          <p class="advantages__paragraph">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">Персонализация стоимости</h3>
+          <p class="advantages__paragraph">Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+        </li>
+      </ul>
+    </section>
+    <section class="about-us">
+      <h2 class="about-us__title">О компании</h2>
+      <p class="about-us__paragraph">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+      <p class="about-us__paragraph">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+      <a class="about-us__button button" href="#">Подробнее</a>
+    </section>
+    <section class="service">
+      <h2>Service Device предлагает следующие товары и услуги</h2>
+      <ul>
+        <li>
+          <a href="#">
+            <h3>Производство печатных плат</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3>Монтаж печатных плат</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3>Комплектующие для светотехники</h3>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="question">
+    <h2 class="visually-hidden">Форма отправки вопроса</h2>
+    <form class="question__form" action="#" method="post">
+      <h3 class="question__title">Остались вопросы? Задайте их нам!</h3>
+      <p class="question__paragraph">Мы проконсультируем Вас бесплатно</p>
+      <div class="question__name">
+        <label class="visually-hidden" for="name">Имя</label>
+        <input type="text" id="name" name="name" placeholder="Имя" required>
+      </div>
+      <div class="question__phone">
+        <label class="visually-hidden" for="phone">Телефон</label>
+        <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+      </div>
+      <textarea class="question__textarea" id="questions" name="questions" placeholder="Ваш вопрос" aria-label="Поле для вопроса"></textarea>
+      <button class="question__button button" type="submit">Задать вопрос</button>
+      <div class="question__consent">
+        <label for="consent">Я согласен на обработку персональных данных</label>
+        <input type="checkbox" id="consent" name="consent" checked required>
+      </div>
+    </form>
+  </section>
+  </main>
+  <footer class="footer">
+    <section class="info">
+      <h2 class="visually-hidden">Информация</h2>
+      <div class="social">
+        <a class="logo" href="index.html">
+          <img src="image/circuit.svg" alt="Логотип Smart Device" width="52" height="52">
+          <p class="logo__slogan">Smart Device <span>умные технологии</span></p>
+        </a>
+        <ul class="social__list">
+          <li class="social__item social__item--facebook"><a href="#">Фейсбук</a></li>
+          <li class="social__item social__item--classmates"><a href="#">Одноклассники</a></li>
+          <li class="social__item social__item--vkontakte"><a href="#">Вконтакте</a></li>
+        </ul>
+      </div>
+      <div class="sections">
+        <h3>Разделы сайта</h3>
+        <ul class="sections__list">
+          <li class="sections__item">
+            <a href="#">О компании</a>
+          </li>
+          <li class="sections__item">
+            <a href="#">Продукты</a>
+          </li>
+          <li class="sections__item">
+            <a href="#">Производство печатных плат</a>
+          </li>
+          <li class="sections__item">
+            <a href="#">Монтаж печетных плат</a>
+          </li>
+          <li class="sections__item">
+            <a href="#">Комплектующие</a>
+          </li>
+          <li class="sections__item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="sections__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="address">
+        <h3 class="address__title">Наш офис</h3>
+        <ul class="address__list">
+          <li class="address__item">
+            <p class="address__paragraph">г. Мытищи, Олимпийский проспект, д.10</p>
+          </li>
+          <li class="address__item">
+            <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+          </li>
+          <li class="address__item">
+            <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+          </li>
+          <li class="address__item">
+            <a href="tel:+792692608079">+7 (926) 926-080-79</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="copyrights">
+      <h2 class="visually-hidden">Копирайты</h2>
+      <ul class="copyrights__list">
+        <li class="copyrights__item">
+          <p>Все права защищены</p>
+        </li>
+        <li class="copyrights__item">
+          <p>1999-2018 SD Service Devices</p>
+        </li>
+        <li class="copyrights__item">
+          <a href="#">Условия конфиденциальности</a>
+        </li>
+        <li class="copyrights__item">
+          <a href="#">Developed by wow studio</a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+  <section class="popup">
+    <h2 class="visually-hidden">Форма заказа звонка</h2>
+    <form class="popup__form" action="#" method="post">
+      <h3 class="popup__title">Закажите звонок</h3>
+      <p class="popup__paragraph">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <div class="popup__name">
+        <label class="visually-hidden" for="popup-name">Имя</label>
+        <input type="text" id="popup-name" name="popup-name" placeholder="Имя" required>
+      </div>
+      <div class="popup__phone">
+        <label class="visually-hidden" for="popup-phone">Телефон</label>
+        <input type="tel" id="popup-phone" name="popup-phone" placeholder="Телефон" required>
+      </div>
+      <textarea class="popup__textarea" id="popup-questions" name="popup-questions" placeholder="Ваш вопрос" aria-label="Поле для вопроса"></textarea>
+      <button class="popup__button" type="submit">Отправить</button>
+      <div class="popup__consent">
+        <label for="popup-consent">Я согласен на обработку персональных данных</label>
+        <input type="checkbox" id="popup-consent" name="popup-consent" checked required>
+      </div>
+    </form>
+  </section>
 </body>
 </html>

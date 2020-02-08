@@ -1,0 +1,21 @@
+.main-header {
+  background-image: url("../img/background-desktop.png"), url("../img/ciurcuit-desktop.png"), url("../img/icon-triangles.svg");
+  background-repeat: no-repeat;
+  background-position: center, 90% 70%, 80% 69%, center center;
+  background-size: cover, auto 58%, auto, cover;
+  background-color: #1b2d37;
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/background-tablet.png"), url("../img/ciurcuit-tablet.png"), url("../img/icon-triangles.svg");
+    background-repeat: no-repeat;
+    background-position: center, right 33%, 456px 82px, center top;
+    background-size: cover, auto 50%, auto 56%, cover;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/background-mobile.png"), url("../img/ciurcuit-mobile.png"), url("../img/icon-triangles.svg");
+    background-repeat: no-repeat;
+    background-position: center, 88% 22%, 171px 76px, center top;
+    background-size: cover, auto 34%, auto 55%, cover;
+  }
+}

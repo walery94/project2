@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart-Device</title>
+  <link rel="preload" href="fonts/ptmono-regular.woff" as="font">
+  <link rel="preload" href="fonts/ptmono-regular.woff2" as="font">
   <link rel="preload" href="fonts/roboto-medium.woff" as="font">
   <link rel="preload" href="fonts/roboto-medium.woff2" as="font">
   <link rel="preload" href="fonts/robotocondensed-regular.woff" as="font">
@@ -14,32 +16,48 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+<div style="display:none">
+  <include src="build/img/sprite_auto.svg"></include>
+</div>
   <header class="main-header">
-    <a class="logo" href="index.html">
-      <img src="image/circuit.svg" alt="Логотип Smart Device" width="52" height="52">
-      <p class="logo__slogan">Smart Device <span>умные технологии</span></p>
-    </a>
+    <div class="wrapper">
     <nav class="navigation">
+      <a class="navigation__logo" href="index.html">
+        <img src="img/icon-logo.svg" alt="Логотип Smart Device" width="52" height="52">
+        <p class="navigation__slogan">Smart Device <span>умные технологии</span></p>
+      </a>
       <ul class="navigation__list">
         <li class="navigation__item">
-          <a class="navigation__email" href="mailto:info@sd.ru">info@sd.ru</a>
+          <a class="navigation__link">
+            <svg width="19px" height="14px">
+              <use xlink:href="#icon-email"></use>
+            </svg>
+            <span class="navigation__contacts" href="mailto:info@sd.ru">info@sd.ru</span>
+          </a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__phone" href="tel:+74950005252">+7 (495) 000 52 52</a>
+          <a class="navigation__link">
+            <svg width="19px" height="14px">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
+            <span class="navigation__contacts" href="tel:+74950005252">+7 (495) 000 52 52</span>
+          </a>
         </li>
       </ul>
       <a class="navigation__button button" href="#">Заказать звонок</a>
     </nav>
     <section class="banner">
-      <h1 class="banner__title">Печатные платы</h1>
-      <p class="banner__paragraph">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <a class="banner__consultation" href="#">
-        <span class="banner__consultation--desktop button">Получить бесплатную консультацию</span>
-        <span class="banner__consultation--mobile button">Бесплатная консультация</span>
-      </a>
-      <a class="banner__scroll-down" href="#">Скролл вниз</a>
-      <img src="image/Untitled12-desktop.jpg" alt="Баннер" width="705" height="515">
+      <div class="banner__inner-wrapper">
+        <h1 class="banner__title">Печатные платы</h1>
+        <p class="banner__paragraph">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a class="banner__button button" href="#">
+          <span class="banner__button--desktop">Получить бесплатную консультацию</span>
+          <span class="banner__button--mobile">Бесплатная консультация</span>
+        </a>
+        <a class="banner__scroll-down" href="#">Скролл вниз</a>
+      </div>
     </section>
+    </div>
   </header>
   <main class="main">
     <section class="advantages">
@@ -116,7 +134,7 @@
       <h2 class="visually-hidden">Информация</h2>
       <div class="social">
         <a class="logo" href="index.html">
-          <img src="image/circuit.svg" alt="Логотип Smart Device" width="52" height="52">
+          <img src="img/icon-logo.svg" alt="Логотип Smart Device" width="52" height="52">
           <p class="logo__slogan">Smart Device <span>умные технологии</span></p>
         </a>
         <ul class="social__list">

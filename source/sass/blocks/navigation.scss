@@ -1,0 +1,102 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 20px;
+  }
+}
+
+.navigation__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__logo img {
+  width: 52px;
+  height: 52px;
+}
+
+.navigation__slogan {
+  min-width: 135px;
+  margin: 0;
+  margin-left: 20px;
+  color: $white;
+
+  @include roboto-cound(25px, 700, 29px);
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.navigation__slogan span {
+  display: block;
+  color: #788891;
+
+  @include roboto(12px, 400, 14px);
+}
+
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 17px;
+  margin-left: auto;
+  list-style: none;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 0;
+  }
+}
+
+.navigation__item:first-child {
+  padding-right: 100px;
+
+  @media (max-width: $tablet-width) {
+    padding-right: 20px;
+  }
+}
+
+.navigation__link {
+  color: $white;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @include ptmono(16px, 400, 18px);
+}
+
+.navigation__contacts {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.navigation__item svg {
+  margin-right: 8px;
+  fill: #00b2ff;
+}
+
+.navigation__button {
+  margin-left: 3.5%;
+  padding-top: 15px;
+  padding-bottom: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $white;
+
+  @include roboto-cound(14px, 700, 16px);
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}

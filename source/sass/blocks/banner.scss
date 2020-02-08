@@ -1,0 +1,158 @@
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 170px;
+  padding-bottom: 276px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 200px;
+  }
+}
+
+.banner__inner-wrapper {
+  z-index: 1;
+  margin-top: 80px;
+  margin-left: 20px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 10%;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+  }
+}
+
+.banner img {
+  position: absolute;
+  right: 5%;
+}
+
+.banner__title {
+  margin: 0;
+  margin-bottom: 33px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $white;
+
+  @include roboto-cound(80px, 700, 94px);
+
+  @media (max-width: $tablet-width) {
+    max-width: 350px;
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 40px;
+    line-height: 47px;
+  }
+}
+
+.banner__paragraph {
+  position: relative;
+  width: 699px;
+  margin: 0;
+  margin-left: 10%;
+  color: $white;
+
+  @include ptmono(22px, 400, 34px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -90px;
+    width: 66px;
+    height: 2px;
+    background-color: $white;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 365px;
+    font-size: 18px;
+    line-height: 156.8%;
+
+    &::before {
+      content: "";
+      left: -50px;
+      width: 33px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 260px;
+    padding-left: 20px;
+    font-size: 16px;
+
+    &::before {
+      content: "";
+      left: -25px;
+    }
+  }
+}
+
+.banner__button {
+  display: block;
+  width: 407px;
+  max-width: 407px;
+  height: 55px;
+  margin-top: 45px;
+  margin-left: 10%;
+  padding: 17px 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  color: $white;
+  background-color: #00b2ff;
+  cursor: pointer;
+
+  @include roboto-cound(16px, 700, 19px);
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &--mobile {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 379px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 280px;
+    margin-left: 0;
+
+    &--desktop {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+    }
+  }
+}
+
+.banner__scroll-down {
+  position: absolute;
+  bottom: 125px;
+  display: block;
+  transform: rotate(-90deg);
+  color: $white;
+  opacity: 0.5;
+
+  @include ptmono(14px, 400, 16px);
+
+  &:hover {
+    opacity: 1;
+    color: $white;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}

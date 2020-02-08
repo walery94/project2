@@ -1,0 +1,20 @@
+@mixin ptmono($size: 16px, $weight: 400, $height: 22px) {
+  font-family: "PT Mono", "Times New Roman", serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin roboto($size: 12px, $weight: 500, $height: 14px) {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin roboto-cound($size: 24px, $weight: 400, $height: 34px) {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}

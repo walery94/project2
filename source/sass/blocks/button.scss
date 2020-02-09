@@ -1,7 +1,13 @@
 .button {
   width: 180px;
   height: 45px;
-  border: 1px solid #ffffff;
+  padding: 14px 0;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid $white;
   box-sizing: border-box;
   border-radius: 5px;
+
+  @include roboto-cound(14px, 700, 16px);
 }

@@ -33,7 +33,7 @@
 
 .navigation__slogan span {
   display: block;
-  color: #788891;
+  color: $light-gry;
 
   @include roboto(12px, 400, 14px);
 }
@@ -78,7 +78,7 @@
 
 .navigation__item svg {
   margin-right: 8px;
-  fill: #00b2ff;
+  fill: $blue;
 }
 
 .navigation__button {

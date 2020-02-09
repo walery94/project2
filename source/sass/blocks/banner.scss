@@ -82,7 +82,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 260px;
+    width: 90%;
     padding-left: 20px;
     font-size: 16px;
 
@@ -106,7 +106,7 @@
   letter-spacing: 0.05em;
   border: none;
   color: $white;
-  background-color: #00b2ff;
+  background-color: $blue;
   cursor: pointer;
 
   @include roboto-cound(16px, 700, 19px);
@@ -124,7 +124,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 280px;
+    width: 100%;
     margin-left: 0;
 
     &--desktop {

@@ -55,6 +55,7 @@
   width: 699px;
   margin: 0;
   margin-left: 10%;
+  padding-left: 20px;
   color: $white;
 
   @include ptmono(22px, 400, 34px);
@@ -63,7 +64,7 @@
     content: "";
     position: absolute;
     top: 15px;
-    left: -90px;
+    left: -70px;
     width: 66px;
     height: 2px;
     background-color: $white;
@@ -71,6 +72,7 @@
 
   @media (max-width: $tablet-width) {
     max-width: 365px;
+    margin-left: 12%;
     font-size: 18px;
     line-height: 156.8%;
 
@@ -83,6 +85,7 @@
 
   @media (max-width: $mobile-width) {
     width: 90%;
+    margin-left: 10%;
     padding-left: 20px;
     font-size: 16px;
 
@@ -99,7 +102,7 @@
   max-width: 407px;
   height: 55px;
   margin-top: 45px;
-  margin-left: 10%;
+  margin-left: 12%;
   padding: 17px 0;
   text-align: center;
   text-transform: uppercase;
@@ -112,7 +115,8 @@
   @include roboto-cound(16px, 700, 19px);
 
   &:hover {
-    opacity: 0.5;
+    background-color: $white;
+    color: $blue;
   }
 
   &--mobile {
@@ -121,6 +125,7 @@
 
   @media (max-width: $tablet-width) {
     width: 379px;
+    margin-left: 16%;
   }
 
   @media (max-width: $mobile-width) {
@@ -140,6 +145,7 @@
 .banner__scroll-down {
   position: absolute;
   bottom: 125px;
+  left: -20px;
   display: block;
   transform: rotate(-90deg);
   color: $white;

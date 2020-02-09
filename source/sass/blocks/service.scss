@@ -1,0 +1,102 @@
+.service__wrapper {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 92%;
+    padding-bottom: 50px;
+  }
+}
+
+.service {
+  margin-top: 100px;
+  color: $white;
+  background-color: $background-color;
+}
+
+.service h2 {
+  margin: 0;
+  margin-bottom: 50px;
+  padding-top: 50px;
+
+  @include roboto-cound(36px, 400, 51px);
+
+  @media (max-width: $tablet-width) {
+    padding-top: 0;
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+  }
+}
+
+.service ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.service li {
+  position: relative;
+  width: 30%;
+  margin-right: 30px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    outline: 1px solid $blue;
+  }
+
+  @media (max-width: $tablet-width) {
+    overflow: hidden;
+    width: 100%;
+    height: 256px;
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
+}
+
+.service a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 63px;
+  height: 63px;
+  background-image: url("../../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $blue;
+}
+
+.service h3 {
+  z-index: 1;
+  position: absolute;
+  width: 170px;
+  margin: 0;
+  margin-top: 50px;
+  margin-left: 50px;
+  color: $white;
+
+  @include roboto-cound(20px, 400, 30px);
+}
+
+.service img {
+  width: 100%;
+  height: 100%;
+}

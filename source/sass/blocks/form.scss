@@ -1,0 +1,155 @@
+.form {
+  z-index: 1;
+  width: 570px;
+  background-color: $blue;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @include roboto-cound(36px, 400, 51px);
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+  }
+}
+
+.form__paragraph {
+  margin: 0;
+  margin-bottom: 40px;
+
+  @include ptmono(16px, 400, 22px);
+}
+
+.form__contacts input {
+  min-width: 270px;
+  height: 50px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  margin-right: 25px;
+  padding: 15px;
+  color: $white;
+  border: none;
+  background-color: $opacity-01;
+
+  @include ptmono(16px, 400, 22px);
+
+  &::placeholder {
+    color: $white;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.form__textarea {
+  display: block;
+  max-width: none;
+  width: 570px;
+  height: 155px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  padding: 15px;
+  color: $white;
+  border: none;
+  background-color: $opacity-01;
+  resize: none;
+
+  @include ptmono(16px, 400, 22px);
+
+  &::placeholder {
+    color: $white;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.form__button {
+  display: block;
+  width: 270px;
+  background-color: $blue;
+  color: $white;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+
+.form__consent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @include ptmono(16px, 400, 16px);
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.form__consent label {
+  position: relative;
+  width: 285px;
+  padding-top: 10px;
+  padding-left: 55px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 82%;
+    padding-left: 40px;
+  }
+}
+
+.form__consent input[type="checkbox"] {
+  display: none;
+}
+
+.form__consent label::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white;
+
+  @media (max-width: $mobile-width) {
+    left: 0;
+  }
+}
+
+.form__consent input:checked + label::before {
+  background-image: url("../img/checked.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,29 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+  }
+}
+
+.logo img {
+  width: 52px;
+  height: 52px;
+}
+
+.logo__slogan {
+  min-width: 135px;
+  margin: 0;
+  margin-left: 20px;
+  color: black;
+
+  @include roboto-cound(25px, 700, 29px);
+}
+
+.logo__slogan span {
+  display: block;
+  color: $light-gry;
+
+  @include roboto(12px, 400, 14px);
+}

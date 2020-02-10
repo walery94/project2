@@ -1,0 +1,86 @@
+.popup {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: 0;
+  width: 410px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  background-color: $blue;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.popup img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.popup__inner-wrapper {
+  margin: 0 auto;
+}
+
+.popup__form {
+  width: 490px;
+}
+
+.popup__title {
+  margin: 0;
+  margin-bottom: 20px;
+  color: $white;
+
+  @include roboto-cound(28px, 400, 140.62%);
+}
+
+.popup__paragraph {
+  margin: 0;
+  margin-bottom: 30px;
+  color: $white;
+
+  @include ptmono(16px, 400, 22px);
+}
+
+.popup__contacts input {
+  margin-right: 0;
+  width: 82%;
+}
+
+.popup__textarea {
+  width: 82%;
+}
+
+.popup__consent {
+  flex-direction: column;
+}
+
+.popup__consent label {
+  width: 350px;
+  color: $white;
+}
+
+.popup__button {
+  width: 82%;
+  margin-bottom: 30px;
+}
+
+.popup__consent label::before {
+  content: "";
+  left: 0;
+  right: 0;
+}
+
+.popup__consent input:checked + label::before {
+  background-image: url("../img/checked.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}

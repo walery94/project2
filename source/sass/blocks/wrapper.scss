@@ -3,4 +3,13 @@
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 24px;
+    padding-right: 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 15px;
+  }
 }

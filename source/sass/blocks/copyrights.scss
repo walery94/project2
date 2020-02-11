@@ -1,11 +1,15 @@
 .copyrights {
-  margin-top: 40px;
+  margin-top: 52px;
   border-top: 1px solid $border;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 38px;
+  }
 }
 
 .copyrights__list {
   display: flex;
-  max-width: 1450px;
+  max-width: 1415px;
   margin: 20px auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -17,6 +21,7 @@
 
   @media (max-width: $tablet-width) {
     justify-content: space-between;
+    padding-left: 27px;
   }
 
   @media (max-width: $mobile-width) {
@@ -30,11 +35,15 @@
 }
 
 .copyrights__item {
-  margin-right: 7%;
+  margin-right: 5%;
+
+  &--years {
+    margin-right: 10%;
+  }
 
   &--developer {
     margin-right: 0;
-    margin-left: 13%;
+    margin-left: 23%;
   }
 
   @media (max-width: $tablet-width) {
@@ -44,8 +53,8 @@
 
     &--years {
       position: absolute;
-      top: 50px;
-      margin-left: 37%;
+      top: 35px;
+      margin-left: 39%;
     }
   }
 

@@ -1,10 +1,14 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 35px;
 
   @media (max-width: $tablet-width) {
     padding-top: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 15px;
   }
 }
 
@@ -16,12 +20,17 @@
 .navigation__logo img {
   width: 52px;
   height: 52px;
+
+  @media (max-width: $mobile-width) {
+    width: 40px;
+    height: 42px;
+  }
 }
 
 .navigation__slogan {
   min-width: 135px;
   margin: 0;
-  margin-left: 20px;
+  margin-left: 15px;
   color: $white;
 
   @include roboto-cound(25px, 700, 29px);
@@ -57,7 +66,7 @@
 }
 
 .navigation__item:first-child {
-  padding-right: 100px;
+  padding-right: 88px;
 
   @media (max-width: $tablet-width) {
     padding-right: 20px;
@@ -83,6 +92,16 @@
 .navigation__item svg {
   margin-right: 8px;
   fill: $blue;
+
+  @media (max-width: $tablet-width) {
+    width: 28px;
+    height: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 5px;
+    margin-right: 0;
+  }
 }
 
 .navigation__button {

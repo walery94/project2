@@ -5,6 +5,10 @@
   @media (max-width: $mobile-width) {
     margin: 0 auto;
   }
+
+  @media (max-width: $mobile-width) {
+    width: 230px;
+  }
 }
 
 .logo img {
@@ -15,7 +19,7 @@
 .logo__slogan {
   min-width: 135px;
   margin: 0;
-  margin-left: 20px;
+  margin-left: 17px;
   color: black;
 
   @include roboto-cound(25px, 700, 29px);

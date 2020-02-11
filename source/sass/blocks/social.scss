@@ -1,18 +1,19 @@
 .social {
-  min-width: 27%;
+  min-width: 30%;
 
   @media (max-width: $tablet-width) {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 10px;
     border-bottom: 1px solid $border;
   }
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
+    padding-bottom: 49px;
   }
 }
 
@@ -30,12 +31,12 @@
 
   @media (max-width: $mobile-width) {
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 72px;
   }
 }
 
 .social__item {
-  margin-right: 20px;
+  margin-right: 14px;
 }
 
 .social__item svg {

@@ -2,7 +2,7 @@
   max-width: 1411px;
   display: flex;
   margin: 0 auto;
-  margin-top: 75px;
+  margin-top: 67px;
 
   @media (max-width: $tablet-width) {
     margin-top: 22px;
@@ -16,8 +16,13 @@
 }
 
 .about-as__img-wrapper {
-  padding-top: 11px;
-  padding-left: 95px;
+  padding-top: 10px;
+  padding-left: 120px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 0;
+    padding-left: 29px;
+  }
 
   @media (max-width: $mobile-width) {
     padding: 0;
@@ -42,6 +47,11 @@
   padding-right: 130px;
   padding-left: 65px;
 
+  @media (max-width: $tablet-width) {
+    padding-right: 35px;
+    padding-left: 50px;
+  }
+
   @media (max-width: $mobile-width) {
     padding: 0;
   }
@@ -54,10 +64,14 @@
   color: $gray;
 
   @media (max-width: $tablet-width) {
+    margin-bottom: 25px;
+
     @include roboto-cound(32px, 400, 140.62%);
   }
 
   @media (max-width: $mobile-width) {
+    margin-bottom: 22px;
+
     @include roboto-cound(28px, 400, 140.62%);
   }
 }
@@ -74,6 +88,22 @@
   &:last-of-type {
     margin-bottom: 40px;
   }
+
+  @media (max-width: $mobile-width) {
+    &:first-of-type {
+      margin-bottom: 41px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 27px;
+    }
+  }
+}
+
+.about-us__paragraph span {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .about-us__button {
@@ -83,6 +113,7 @@
   border: 1px solid $blue;
 
   &:hover {
-    opacity: 0.5;
+    color: $white;
+    background-color: $blue;
   }
 }

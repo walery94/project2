@@ -151,7 +151,7 @@
           <img src="img/paper-airplane.png" width="511" height="288" alt="Самолетик">
         </div>
         <div class="question__form-wapper">
-          <form class="form" action="#" method="post">
+          <form class="form" action="#" method="get">
             <h3 class="form__title">Остались вопросы? Задайте их нам!</h3>
             <p class="form__paragraph">Мы проконсультируем Вас бесплатно</p>
             <div class="form__contacts">
@@ -270,10 +270,11 @@
     </section>
     </div>
   </footer>
+<div class="overlay"></div>
   <section class="popup">
     <h2 class="visually-hidden">Форма заказа звонка</h2>
-    <form class="popup__form" action="#" method="post">
-      <img src="img/modal-close.svg" alt="Закрыть окно" width="17" height="17">
+    <form class="popup__form" action="#" method="get">
+      <img class="popup__close" src="img/modal-close.svg" alt="Закрыть окно" width="17" height="17">
       <div class="popup__inner-wrapper">
         <h3 class="popup__title">Закажите звонок</h3>
         <p class="popup__paragraph">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
@@ -292,5 +293,7 @@
       </div>
     </form>
   </section>
+<script src="https://unpkg.com/imask"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

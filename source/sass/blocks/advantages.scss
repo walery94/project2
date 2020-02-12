@@ -61,7 +61,8 @@
   }
 }
 
-.advantages__item:hover {
+.advantages__item:hover,
+.advantages__item:focus {
   background-color: $blue;
 
   h3,

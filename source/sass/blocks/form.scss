@@ -66,6 +66,11 @@
     margin-right: 0;
   }
 
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
   @media (max-width: $tablet-width) {
     width: 278px;
   }
@@ -75,6 +80,10 @@
     margin: 0;
     margin-bottom: 30px;
   }
+}
+
+.form__contacts input:invalid {
+  box-shadow: none;
 }
 
 .form__textarea {
@@ -96,6 +105,11 @@
     color: $white;
   }
 
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
   @media (max-width: $tablet-width) {
     width: 585px;
     height: 166px;
@@ -112,11 +126,13 @@
 .form__button {
   display: block;
   width: 270px;
+  height: auto;
   background-color: $blue;
   color: $white;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.5;
   }
 
@@ -151,7 +167,8 @@
 
   @include ptmono(14px, 400, 16px);
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.8;
   }
 

@@ -14,6 +14,91 @@
   var formPhone = document.querySelector('#phone');
   var formQuestions = document.querySelector('#questions');
   var ESC = 27;
+  var websiteSections = document.querySelector('#website-sections');
+  var ourAddress = document.querySelector('#our-address');
+
+  // Opened/Close footer-menu
+
+  function switchVisible(event) {
+    if (event.target.classList.contains('footer__opened')) {
+      return;
+    }
+    var opened = document.querySelector('.footer__opened');
+    var closed = document.querySelector('.footer__closed');
+
+    if (opened && closed) {
+
+      var ulOpened = opened.nextElementSibling;
+      var ulClosed = closed.nextElementSibling;
+
+      if (ulClosed && ulOpened) {
+        ulClosed.classList.remove('footer__hide');
+        ulOpened.classList.add('footer__hide');
+        opened.classList.remove('footer__opened');
+        opened.classList.add('footer__closed');
+        closed.classList.remove('footer__closed');
+        closed.classList.add('footer__opened');
+      }
+    }
+
+  }
+
+  websiteSections.addEventListener('click', function (evt) {
+    switchVisible(evt);
+  });
+
+  ourAddress.addEventListener('click', function (evt) {
+    switchVisible(evt);
+  });
+
+  // Scroll-down
+
+  var scrollAdvantages = document.querySelector('.banner__scroll-down');
+  var scrollQuestions = document.querySelector('.banner__button');
+
+  function doScrolling(element, duration) {
+
+    var startingY = window.pageYOffset;
+    var elementY = window.pageYOffset + document.querySelector(element).getBoundingClientRect().top;
+
+    var targetY = document.body.scrollHeight - elementY < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elementY;
+    var diff = targetY - startingY;
+    var start;
+
+    if (!diff) {
+      return;
+    }
+
+    window.requestAnimationFrame(function step(timestamp) {
+      if (!start) {
+        start = timestamp;
+      }
+
+      var time = timestamp - start;
+      var percent = Math.min(time / duration, 1);
+
+      window.scrollTo(0, startingY + diff * percent);
+      if (time < duration) {
+        window.requestAnimationFrame(step);
+      }
+    });
+  }
+
+  if (scrollAdvantages) {
+    scrollAdvantages.addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      doScrolling('#advantages', 500);
+    });
+  }
+
+  if (scrollQuestions) {
+    scrollQuestions.addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      doScrolling('#section-questions', 500);
+    });
+  }
 
   // Local Storage
 
@@ -51,7 +136,12 @@
   };
 
   var clearLocalStorage = function (forms) {
-    Array.from(forms.querySelectorAll('input:not([type=checkbox]), textarea')).forEach(function (element) {
+    var almostArr = forms.querySelectorAll('input:not([type=checkbox]), textarea');
+    var alreadyArr = [];
+    for (var i = 0; i < almostArr.length; i++) {
+      alreadyArr.push(almostArr[i]);
+    }
+    alreadyArr.forEach(function (element) {
       element.value = '';
     });
     window.localStorage.clear();
@@ -59,7 +149,9 @@
   };
 
   if (isStorageSupport) {
-    getItemForm();
+    if (localStorage.getItem(formQuestions)) {
+      getItemForm();
+    }
   }
 
   // Open/Close popup
@@ -132,7 +224,8 @@
     }
   });
 
-  form.addEventListener('submit', function () {
+  form.addEventListener('submit', function (evt) {
+    evt.preventDefault();
     clearLocalStorage(form);
   });
 

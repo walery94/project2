@@ -78,25 +78,25 @@
   <header class="main-header">
     <div class="wrapper">
     <nav class="navigation">
-      <a class="navigation__logo" href="index.html">
+      <a class="navigation__logo">
         <img src="img/icon-logo.svg" alt="Логотип Smart Device" width="52" height="52">
         <p class="navigation__slogan">Smart Device <span>умные технологии</span></p>
       </a>
       <ul class="navigation__list">
         <li class="navigation__item">
-          <a class="navigation__link">
+          <a class="navigation__link" href="mailto:info@sd.ru">
             <svg width="19px" height="14px">
               <use xlink:href="#icon-email"></use>
             </svg>
-            <span class="navigation__contacts" href="mailto:info@sd.ru">info@sd.ru</span>
+            <span class="navigation__contacts">info@sd.ru</span>
           </a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link">
+          <a class="navigation__link" href="tel:+74950005252">
             <svg width="19px" height="14px">
               <use xlink:href="#icon-phone"></use>
             </svg>
-            <span class="navigation__contacts" href="tel:+74950005252">+7 (495) 000 52 52</span>
+            <span class="navigation__contacts">+7 (495) 000 52 52</span>
           </a>
         </li>
       </ul>
@@ -106,17 +106,17 @@
       <div class="banner__inner-wrapper">
         <h1 class="banner__title">Печатные платы</h1>
         <p class="banner__paragraph">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="banner__button button" href="#">
+        <a class="banner__button button" href="#section-questions">
           <span class="banner__button--desktop">Получить бесплатную консультацию</span>
           <span class="banner__button--mobile">Бесплатная консультация</span>
         </a>
-        <a class="banner__scroll-down" href="#">Скролл вниз</a>
+        <a class="banner__scroll-down" href="#advantages">Скролл вниз</a>
       </div>
     </section>
     </div>
   </header>
   <main class="main">
-    <section class="advantages">
+    <section class="advantages" id="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <ul class="advantages__list">
         <li class="advantages__item">
@@ -152,8 +152,10 @@
     <section class="about-us">
       <div class="about-as__img-wrapper">
         <picture>
-          <source srcset="img/2005-tablet.png" media="(max-width: 1023px)">
-          <img src="img/2005-desktop.png" width="115" height="305" alt="2005">
+          <!-- 1x: 131px; 2x: 261px -->
+          <source srcset="img/2005-tablet@1x.png, img/2005-tablet@2x.png 2x" media="(max-width: 1023px)">
+          <!-- 1x: 115px; 2x: 229px -->
+          <img src="img/2005-desktop@1x.png" srcset="img/2005-desktop@2x.png 2x" width="115" height="305" alt="2005">
         </picture>
       </div>
       <div class="about-us__content-wrapper">
@@ -168,22 +170,28 @@
         <h2>Service Device предлагает следующие товары и услуги</h2>
         <ul>
           <li>
-            <a href="#">
-              <h3>Производство печатных плат</h3>
-              <picture>
-                <source media="(max-width: 767px)" srcset="img/goods1-mobile.png">
-                <source media="(max-width: 1023px)" srcset="img/goods1-tablet.png">
-                <img src="img/goods1-desktop.png" width="370" height="620" alt="Производство печатных плат">
-              </picture>
-            </a>
-          </li>
+          <a href="#">
+            <h3>Производство печатных плат</h3>
+            <picture>
+              <!-- 1x: 290px; 2x: 580px -->
+              <source media="(max-width: 767px)" srcset="img/goods1-mobile@1x.png, img/goods1-mobile@2x.png 2x">
+              <!-- 1x: 720px; 2x: 1440px -->
+              <source media="(max-width: 1023px)" srcset="img/goods1-tablet@1x.png, img/goods1-tablet@2x.png 2x">
+              <!-- 1x: 370px; 2x: 740px -->
+              <img src="img/goods1-desktop@1x.png" srcset="img/goods1-desktop@2x.png 2x" width="370" height="620" alt="Производство печатных плат">
+            </picture>
+          </a>
+        </li>
           <li>
             <a href="#">
               <h3>Монтаж печатных плат</h3>
               <picture>
-                <source media="(max-width: 767px)" srcset="img/goods2-mobile.png">
-                <source media="(max-width: 1023px)" srcset="img/goods2-tablet.png">
-                <img src="img/goods2-desktop.png" width="370" height="620" alt="Монтаж печатных плат">
+                <!-- 1x: 290px; 2x: 580px -->
+                <source media="(max-width: 767px)" srcset="img/goods2-mobile@1x.png, img/goods2-mobile@2x.png 2x">
+                <!-- 1x: 720px; 2x: 1440px -->
+                <source media="(max-width: 1023px)" srcset="img/goods2-tablet@1x.png, img/goods2-tablet@2x.png 2x">
+                <!-- 1x: 370px; 2x: 740px -->
+                <img src="img/goods2-desktop@1x.png" srcset="img/goods2-desktop@2x.png 2x" width="370" height="620" alt="Монтаж печатных плат">
               </picture>
             </a>
           </li>
@@ -191,32 +199,38 @@
             <a href="#">
               <h3>Комплектующие для светотехники</h3>
               <picture>
-                <source media="(max-width: 767px)" srcset="img/goods3-mobile.png">
-                <source media="(max-width: 1023px)" srcset="img/goods3-tablet.png">
-                <img src="img/goods3-desktop.png" width="370" height="620" alt="Комплектующие для светотехники">
+                <!-- 1x: 290px; 2x: 580px -->
+                <source media="(max-width: 767px)" srcset="img/goods3-mobile@1x.png, img/goods3-mobile@2x.png 2x">
+                <!-- 1x: 720px; 2x: 1440px -->
+                <source media="(max-width: 1023px)" srcset="img/goods3-tablet@1x.png, img/goods3-tablet@2x.png 2x">
+                <!-- 1x: 370px; 2x: 740px -->
+                <img src="img/goods3-desktop@1x.png" srcset="img/goods3-desktop@2x.png 2x" width="370" height="620" alt="Комплектующие для светотехники">
               </picture>
             </a>
           </li>
         </ul>
       </div>
     </section>
-    <section class="question">
+    <section class="question" id="section-questions">
       <div class="question__inner-wrapper">
         <h2 class="visually-hidden">Форма отправки вопроса</h2>
         <div class="question__image-wrapper">
-          <img src="img/paper-airplane.png" width="511" height="288" alt="Самолетик">
+          <picture>
+            <!-- 1x: 511px; 2x: 1022px -->
+            <img src="img/paper-airplane@1x.png" srcset="img/peper-airplane@2x.png 2x" width="511" height="288" alt="Самолетик">
+          </picture>
         </div>
         <div class="question__form-wapper">
           <form class="form" action="#" method="get">
             <h3 class="form__title">Остались вопросы? Задайте их нам!</h3>
             <p class="form__paragraph">Мы проконсультируем Вас бесплатно</p>
             <div class="form__contacts">
-              <label class="visually-hidden" for="name">Имя</label>
+              <label class="visually-hidden" for="name" aria-label="Имя"></label>
               <input type="text" id="name" name="name" placeholder="Имя" required="">
-              <label class="visually-hidden" for="phone">Телефон</label>
+              <label class="visually-hidden" for="phone" aria-label="Телефон"></label>
               <input type="tel" id="phone" name="phone" placeholder="Телефон" required="">
             </div>
-            <textarea class="form__textarea" id="questions" name="questions" placeholder="Ваш вопрос" aria-label="Поле для вопроса"></textarea>
+            <textarea class="form__textarea" id="questions" name="questions" placeholder="Ваш вопрос" rows="4" cols="50" maxLength="200" aria-label="Поле для вопроса"></textarea>
             <div class="form__consent">
               <button class="form__button button" type="submit">Задать вопрос</button>
               <input type="checkbox" id="consent" name="consent" checked="" required="">
@@ -232,7 +246,7 @@
     <section class="info">
       <h2 class="visually-hidden">Информация</h2>
       <div class="social">
-        <a class="logo" href="index.html">
+        <a class="logo">
           <img src="img/icon-logo.svg" alt="Логотип Smart Device" width="52" height="52">
           <p class="logo__slogan">Service Device<span>умные технологии</span></p>
         </a>
@@ -255,16 +269,16 @@
           </li>
           <li class="social__item social__item--vk">
             <a href="#">
-              <svg width="27" height="27">
-                <use xlink:href="#icon-vk"></use>
-              </svg>
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
+            <svg width="27" height="27">
+              <use xlink:href="#icon-vk"></use>
+            </svg>
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
           </li>
         </ul>
       </div>
-      <div class="sections">
-        <h3 class="sections__title sections__title--close sections__title--open">Разделы сайта</h3>
+      <div class="sections" id="website-sections">
+        <h3 class="sections__title footer__opened">Разделы сайта</h3>
         <ul class="sections__list">
           <li class="sections__item">
             <a href="#">О компании</a>
@@ -289,9 +303,9 @@
           </li>
         </ul>
       </div>
-      <div class="address">
-        <h3 class="address__title address__title--close address__title--open">Наш офис</h3>
-        <ul class="address__list">
+      <div class="address" id="our-address">
+        <h3 class="address__title footer__closed">Наш офис</h3>
+        <ul class="address__list footer__hide">
           <li class="address__item">
             <p class="address__paragraph">г. Мытищи, Олимпийский проспект, д.10</p>
           </li>
@@ -330,17 +344,17 @@
   <section class="popup">
     <h2 class="visually-hidden">Форма заказа звонка</h2>
     <form class="popup__form" action="#" method="get">
-      <img class="popup__close" src="img/modal-close.svg" alt="Закрыть окно" width="17" height="17">
+      <img class="popup__close" src="img/modal-close.svg" alt="Закрыть модальное окно" width="17" height="17">
       <div class="popup__inner-wrapper">
         <h3 class="popup__title">Закажите звонок</h3>
         <p class="popup__paragraph">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <div class="form__contacts popup__contacts">
-          <label class="visually-hidden" for="popup-name">Имя</label>
+          <label class="visually-hidden" for="popup-name" aria-label="Имя"></label>
           <input type="text" id="popup-name" name="popup-name" placeholder="Имя" required="">
-          <label class="visually-hidden" for="popup-phone">Телефон</label>
+          <label class="visually-hidden" for="popup-phone" aria-label="Телефон"></label>
           <input type="tel" id="popup-phone" name="popup-phone" placeholder="Телефон" required="">
         </div>
-        <textarea class="form__textarea popup__textarea" id="popup-questions" name="popup-questions" placeholder="Ваш вопрос" aria-label="Поле для вопроса"></textarea>
+        <textarea class="form__textarea popup__textarea" id="popup-questions" name="popup-questions" rows="4" cols="50" maxLength="200" placeholder="Ваш вопрос" aria-label="Поле для вопроса"></textarea>
         <div class="form__consent popup__consent">
           <button class="form__button button popup__button" type="submit">Отправить</button>
           <input type="checkbox" id="popup-consent" name="popup-consent" checked="" required="">

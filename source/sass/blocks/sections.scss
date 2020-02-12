@@ -1,4 +1,5 @@
 .sections {
+  position: relative;
   min-width: 42%;
   margin-right: 60px;
 
@@ -12,14 +13,12 @@
     width: 100%;
     margin-right: 0;
     padding-top: 10px;
-    padding-bottom: 20px;
     padding-left: 0;
     border-bottom: 1px solid $border;
   }
 }
 
 .sections__title {
-  position: relative;
   margin: 0;
   margin-bottom: 24px;
   text-transform: uppercase;
@@ -29,41 +28,11 @@
   @media (max-width: $mobile-width) {
     padding-top: 10px;
     padding-left: 15px;
-  }
-}
 
-.sections__title--close::after {
-  @media (max-width: $mobile-width) {
-    content: "";
-    width: 16px;
-    height: 2px;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    background-image: url("../img/minus.svg");
-    background-repeat: no-repeat;
-    background-position: right;
-  }
-}
-
-.sections__title--open {
-  @media (max-width: $mobile-width) {
-    padding-bottom: 20px;
-    border-bottom: 1px solid $border;
-  }
-}
-
-.sections__title--open::after {
-  @media (max-width: $mobile-width) {
-    content: "";
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    background-image: url("../img/plus.svg");
-    background-repeat: no-repeat;
-    background-position: right;
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -75,13 +44,18 @@
 
   @include ptmono(15px, 400, 25px);
 
-  :hover {
+  :hover,
+  &:focus {
     opacity: 1;
   }
 
   @media (max-width: $tablet-width) {
     column-count: 1;
     padding-left: 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 38px;
   }
 }
 

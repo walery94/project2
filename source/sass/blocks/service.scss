@@ -2,7 +2,7 @@
   max-width: 1170px;
   margin: 0 auto;
   padding-top: 50px;
-  padding-bottom: 128px;
+  padding-bottom: 113px;
   padding-left: 20px;
   padding-right: 20px;
 
@@ -67,13 +67,15 @@
 .service li {
   position: relative;
   width: 31.6%;
+  margin-bottom: 15px;
   margin-right: 15px;
 
-  &:last-of-type {
+  &:nth-of-type(3n) {
     margin-right: 0;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     outline: 1px solid $blue;
   }
 

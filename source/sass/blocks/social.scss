@@ -43,6 +43,7 @@
   fill: #cdcdcd;
 }
 
-.social__item:hover {
+.social__item:hover,
+.social__item:focus {
   opacity: 0.5;
 }

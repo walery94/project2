@@ -1,4 +1,6 @@
 .address {
+  position: relative;
+
   @media (max-width: $tablet-width) {
     padding-top: 40px;
     padding-right: 20px;
@@ -17,7 +19,6 @@
 }
 
 .address__title {
-  position: relative;
   margin: 0;
   margin-bottom: 23px;
   text-transform: uppercase;
@@ -25,43 +26,14 @@
   @include roboto-cound(15px, 400, 16px);
 
   @media (max-width: $mobile-width) {
+    width: 100%;
     padding-top: 10px;
     padding-left: 15px;
-  }
-}
 
-.address__title--close::after {
-  @media (max-width: $mobile-width) {
-    content: "";
-    width: 16px;
-    height: 2px;
-    position: absolute;
-    right: 0;
-    top: 15px;
-    background-image: url("../img/minus.svg");
-    background-repeat: no-repeat;
-    background-position: right;
-  }
-}
-
-.address__title--open {
-  @media (max-width: $mobile-width) {
-    padding-bottom: 20px;
-    border-bottom: 1px solid $border;
-  }
-}
-
-.address__title--open::after {
-  @media (max-width: $mobile-width) {
-    content: "";
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    background-image: url("../img/plus.svg");
-    background-repeat: no-repeat;
-    background-position: right;
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -73,11 +45,13 @@
   @include ptmono(15px, 400, 25px);
 
   @media (max-width: $mobile-width) {
+    padding-bottom: 38px;
     padding-left: 15px;
   }
 }
 
-.address__list a:hover {
+.address__list a:hover,
+.address__list a:focus {
   opacity: 1;
 }
 

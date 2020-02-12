@@ -3,7 +3,7 @@
   border-top: 1px solid $border;
 
   @media (max-width: $tablet-width) {
-    margin-top: 38px;
+    margin-top: 0;
   }
 }
 
@@ -30,7 +30,8 @@
   }
 }
 
-.copyrights__list a:hover {
+.copyrights__list a:hover,
+.copyrights__list a:focus {
   opacity: 1;
 }
 

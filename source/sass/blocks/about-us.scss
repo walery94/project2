@@ -109,10 +109,13 @@
 .about-us__button {
   display: block;
   width: 180px;
+  height: auto;
+  overflow: hidden;
   color: $blue;
   border: 1px solid $blue;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $white;
     background-color: $blue;
   }

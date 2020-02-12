@@ -6,6 +6,7 @@
   right: 0;
   left: 0;
   width: 410px;
+  height: auto;
   margin: 0 auto;
   padding: 30px 40px;
   background-color: $blue;
@@ -25,7 +26,8 @@
   right: 20px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.5;
   }
 }
@@ -57,10 +59,25 @@
 .popup__contacts input {
   margin-right: 0;
   width: 82%;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.popup__contacts input:invalid {
+  box-shadow: none;
 }
 
 .popup__textarea {
   width: 82%;
+  outline: 1px solid $blue;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
 .popup__consent {
@@ -74,6 +91,7 @@
 
 .popup__button {
   width: 82%;
+  height: auto;
   margin-bottom: 30px;
 }
 

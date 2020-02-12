@@ -76,7 +76,8 @@
 .navigation__link {
   color: $white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.5;
   }
 
@@ -115,7 +116,8 @@
 
   @include roboto-cound(14px, 700, 16px);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $blue;
   }
 

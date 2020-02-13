@@ -10,6 +10,8 @@
   var popupName = document.querySelector('#popup-name');
   var popupPhone = document.querySelector('#popup-phone');
   var popupQuestions = document.querySelector('#popup-questions');
+  var popupCheckbox = document.querySelector('.popup-consent');
+  var checkbox = document.querySelector('#consent');
   var form = document.querySelector('.form');
   var formName = document.querySelector('#name');
   var formPhone = document.querySelector('#phone');
@@ -239,4 +241,27 @@
 
   maskPopupPhone.updateValue();
   maskFormPhone.updateValue();
+
+
+
+
+  if (checkbox) {
+    checkbox.addEventListener('change', function () {
+      if (checkbox.validity.valueMissing) {
+        checkbox.setCustomValidity('Дайте согласие на обработку персональных данных');
+      } else {
+        checkbox.setCustomValidity('');
+      }
+    });
+  }
+
+  if (popupCheckbox) {
+    popupCheckbox.addEventListener('change', function () {
+      if (popupCheckbox.validity.valueMissing) {
+        popupCheckbox.setCustomValidity('Дайте согласие на обработку персональных данных');
+      } else {
+        popupCheckbox.setCustomValidity('');
+      }
+    });
+  }
 })();

@@ -1,5 +1,6 @@
 .form {
   z-index: 1;
+  position: relative;
   width: 622px;
   background-color: $blue;
 
@@ -131,6 +132,7 @@
   height: auto;
   background-color: $blue;
   color: $white;
+  outline: 1px solid $blue;
   cursor: pointer;
 
   &:hover,
@@ -186,7 +188,23 @@
 }
 
 .form__consent input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  left: 51%;
+  bottom: 6%;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
+
+.form__consent--popup input[type="checkbox"] {
+  bottom: 8%;
+  left: 10%;
 }
 
 .form__consent label::before {

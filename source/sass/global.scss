@@ -18,6 +18,10 @@ img {
   height: auto;
 }
 
+input {
+  border-radius: 0;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {

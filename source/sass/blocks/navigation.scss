@@ -56,6 +56,10 @@
   margin-left: auto;
   list-style: none;
 
+  @media (max-width: $tablet-width) {
+    padding-right: 15px;
+  }
+
   @media (max-width: $mobile-width) {
     margin-top: 0;
   }

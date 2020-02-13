@@ -1,9 +1,9 @@
 .question {
-  background-image: url("../img/icon-triangles.svg"), url("../img/triangle-left-white.svg"), url("../img/triangle-right-white.svg");
-  background-position: 15% 50%, 99% 10%, 105% 108%;
+  background-image: url("../img/triangle-left-white.svg"), url("../img/triangle-right-white.svg");
+  background-position: 99% 10%, 105% 108%;
+  background-color: $blue;
   background-size: auto;
   background-repeat: no-repeat;
-  background-color: $blue;
   color: $white;
 
   @media (max-width: $tablet-width) {
@@ -14,17 +14,22 @@
 .question__inner-wrapper {
   display: flex;
   justify-content: space-between;
-  max-width: 66%;
+  max-width: 1275px;
   margin: 0 auto;
   padding-top: 90px;
   padding-bottom: 114px;
   padding-left: 25px;
   padding-right: 25px;
+  background-image: url("../img/icon-triangles.svg");
+  background-position: left 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
 
   @media (max-width: $tablet-width) {
     justify-content: center;
     padding-top: 79px;
     padding-bottom: 105px;
+    background-image: none;
   }
 
   @media (max-width: $mobile-width) {
@@ -36,7 +41,6 @@
 
 .question img {
   padding-top: 70px;
-  padding-left: 25px;
 
   @media (max-width: $tablet-width) {
     display: none;

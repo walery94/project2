@@ -4,14 +4,39 @@
   justify-content: space-between;
   padding-top: 148px;
   padding-bottom: 276px;
+  background-image: url("../img/ciurcuit-desktop@1x.png"), url("../img/icon-triangles.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 60%, 100% 60%;
+  background-size: auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/ciurcuit-desktop@2x.png"), url("../img/icon-triangles.svg");
+    background-size: 50%;
+  }
 
   @media (max-width: $tablet-width) {
     padding-top: 36px;
     padding-bottom: 165px;
+    background-image: url("../img/ciurcuit-tablet@1x.png"), url("../img/icon-triangles.svg");
+    background-repeat: no-repeat;
+    background-position: right 33%, 456px 82px;
+    background-size: auto 50%, auto 56%;
+  }
+
+  @media (max-width: $tablet-width) and (min-resolution: $retina-dpi), (max-width: $tablet-width) and (min-resolution: $retina-dppx) {
+    background-image: url("../img/ciurcuit-tablet@2x.png"), url("../img/icon-triangles.svg");
   }
 
   @media (max-width: $mobile-width) {
     padding-bottom: 70px;
+    background-image: url("../img/ciurcuit-mobile@1x.png"), url("../img/icon-triangles.svg");
+    background-repeat: no-repeat;
+    background-position: 88% 22%, 171px 76px;
+    background-size: auto 34%, auto 55%;
+  }
+
+  @media (max-width: $mobile-width) and (min-resolution: $retina-dpi), (max-width: $mobile-width) and (min-resolution: $retina-dppx) {
+    background-image: url("../img/ciurcuit-mobile@2x.png"), url("../img/icon-triangles.svg");
   }
 }
 
@@ -25,8 +50,8 @@
   }
 
   @media (max-width: $mobile-width) {
+    margin: 0 auto;
     margin-top: 193px;
-    margin-left: 10px;
   }
 }
 
@@ -53,6 +78,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    margin-left: 0;
     font-size: 40px;
     line-height: 47px;
   }
@@ -92,8 +118,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 88%;
-    margin-left: 7%;
+    width: 83%;
+    margin-left: 10%;
     padding-left: 20px;
     font-size: 16px;
 
@@ -138,7 +164,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 100%;
+    width: 95%;
     margin-top: 43px;
     margin-left: 0;
 

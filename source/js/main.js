@@ -1,6 +1,7 @@
 'use strict';
 
 (function () {
+  var body = document.querySelector('body');
   var overlay = document.querySelector('.overlay');
   var button = document.querySelector('.navigation__button');
   var popup = document.querySelector('.popup');
@@ -20,36 +21,32 @@
   // Opened/Close footer-menu
 
   function switchVisible(event) {
-    if (event.target.classList.contains('footer__opened')) {
-      return;
+
+    var element = event.target;
+    var ulElement = element.nextElementSibling;
+
+    if (element.classList.contains('footer__closed')) {
+      element.classList.add('footer__opened');
+      element.classList.remove('footer__closed');
+      ulElement.classList.remove('footer__hide');
+    } else {
+      element.classList.remove('footer__opened');
+      element.classList.add('footer__closed');
+      ulElement.classList.add('footer__hide');
     }
-    var opened = document.querySelector('.footer__opened');
-    var closed = document.querySelector('.footer__closed');
-
-    if (opened && closed) {
-
-      var ulOpened = opened.nextElementSibling;
-      var ulClosed = closed.nextElementSibling;
-
-      if (ulClosed && ulOpened) {
-        ulClosed.classList.remove('footer__hide');
-        ulOpened.classList.add('footer__hide');
-        opened.classList.remove('footer__opened');
-        opened.classList.add('footer__closed');
-        closed.classList.remove('footer__closed');
-        closed.classList.add('footer__opened');
-      }
-    }
-
   }
 
-  websiteSections.addEventListener('click', function (evt) {
-    switchVisible(evt);
-  });
+  if (websiteSections) {
+    websiteSections.addEventListener('click', function (evt) {
+      switchVisible(evt);
+    });
+  }
 
-  ourAddress.addEventListener('click', function (evt) {
-    switchVisible(evt);
-  });
+  if (ourAddress) {
+    ourAddress.addEventListener('click', function (evt) {
+      switchVisible(evt);
+    });
+  }
 
   // Scroll-down
 
@@ -96,7 +93,7 @@
     scrollQuestions.addEventListener('click', function (evt) {
       evt.preventDefault();
 
-      doScrolling('#section-questions', 500);
+      doScrolling('#section-questions', 1500);
     });
   }
 
@@ -160,6 +157,7 @@
     evt.preventDefault();
     popup.classList.remove('popup__open');
     overlay.style.display = 'none';
+    body.classList.remove('popup__no-scroll');
     popupName.focus();
   };
 
@@ -167,6 +165,7 @@
     button.addEventListener('click', function (evt) {
       evt.preventDefault();
       popup.classList.add('popup__open');
+      body.classList.add('popup__no-scroll');
       overlay.style.display = 'block';
 
       if (isStorageSupport) {

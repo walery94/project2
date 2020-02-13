@@ -1,33 +1,33 @@
 .main-header {
-  background-image: url("../img/background-desktop@1x.png"), url("../img/ciurcuit-desktop@1x.png"), url("../img/icon-triangles.svg");
+  background-image: url("../img/background-desktop@1x.png");
   background-repeat: no-repeat;
-  background-position: center center, 85% 70%, 80% 69%;
-  background-size: cover, auto 58%, auto;
+  background-position: center center;
+  background-size: cover;
   background-color: $background-color;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/background-desktop@2x.png"), url("../img/ciurcuit-desktop@2x.png"), url("../img/icon-triangles.svg");
+    background-image: url("../img/background-desktop@2x.png");
   }
 
   @media (max-width: $tablet-width) {
-    background-image: url("../img/background-tablet@1x.png"), url("../img/ciurcuit-tablet@1x.png"), url("../img/icon-triangles.svg");
+    background-image: url("../img/background-tablet@1x.png");
     background-repeat: no-repeat;
-    background-position: center top, right 33%, 456px 82px;
-    background-size: cover, auto 50%, auto 56%;
+    background-position: center top;
+    background-size: cover;
   }
 
   @media (max-width: $tablet-width) and (min-resolution: $retina-dpi), (max-width: $tablet-width) and (min-resolution: $retina-dppx) {
-    background-image: url("../img/background-tablet@2x.png"), url("../img/ciurcuit-tablet@2x.png"), url("../img/icon-triangles.svg");
+    background-image: url("../img/background-tablet@2x.png");
   }
 
   @media (max-width: $mobile-width) {
-    background-image: url("../img/background-mobile@1x.png"), url("../img/ciurcuit-mobile@1x.png"), url("../img/icon-triangles.svg");
+    background-image: url("../img/background-mobile@1x.png");
     background-repeat: no-repeat;
-    background-position: center top, 88% 22%, 171px 76px;
-    background-size: cover, auto 34%, auto 55%;
+    background-position: center top;
+    background-size: cover;
   }
 
   @media (max-width: $mobile-width) and (min-resolution: $retina-dpi), (max-width: $mobile-width) and (min-resolution: $retina-dppx) {
-    background-image: url("../img/background-mobile@2x.png"), url("../img/ciurcuit-mobile@2x.png"), url("../img/icon-triangles.svg");
+    background-image: url("../img/background-mobile@2x.png");
   }
 }

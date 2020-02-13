@@ -68,6 +68,7 @@
 
   &:hover,
   &:focus {
+    outline: 1px solid $blue;
     opacity: 0.5;
   }
 
@@ -107,6 +108,7 @@
 
   &:hover,
   &:focus {
+    outline: 1px solid $blue;
     opacity: 0.5;
   }
 

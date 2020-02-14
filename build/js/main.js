@@ -22,12 +22,10 @@
 
   // Opened/Close footer-menu
 
-  function switchVisible(event) {
-
-    var element = event.target;
+  function switchVisible(element, open) {
     var ulElement = element.nextElementSibling;
 
-    if (element.classList.contains('footer__closed')) {
+    if (open) {
       element.classList.add('footer__opened');
       element.classList.remove('footer__closed');
       ulElement.classList.remove('footer__hide');
@@ -40,13 +38,29 @@
 
   if (websiteSections) {
     websiteSections.addEventListener('click', function (evt) {
-      switchVisible(evt);
+      var element = evt.target;
+      var isClosed = !element.classList.contains('footer__opened');
+
+      switchVisible(element, isClosed);
+      if (ourAddress) {
+        if (ourAddress.classList.contains('footer__opened')) {
+            switchVisible(ourAddress, !isClosed)
+        }
+      }
     });
   }
 
   if (ourAddress) {
     ourAddress.addEventListener('click', function (evt) {
-      switchVisible(evt);
+      var element = evt.target;
+      var isClosed = !element.classList.contains('footer__opened');
+
+      switchVisible(element, isClosed);
+      if (websiteSections) {
+        if (websiteSections.classList.contains('footer__opened')) {
+          switchVisible(websiteSections, !isClosed)
+        }
+      }
     });
   }
 

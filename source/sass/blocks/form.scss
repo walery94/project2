@@ -27,6 +27,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    margin-bottom: 15px;
     font-size: 28px;
   }
 }
@@ -52,7 +53,7 @@
   box-sizing: border-box;
   margin-bottom: 40px;
   margin-right: 25px;
-  padding: 20px;
+  padding-left: 20px;
   color: $white;
   border: none;
   background-color: $opacity-01;
@@ -183,7 +184,7 @@
 
   @media (max-width: $mobile-width) {
     width: 82%;
-    padding-left: 40px;
+    padding-left: 35px;
   }
 }
 

@@ -19,8 +19,8 @@
     padding-bottom: 165px;
     background-image: url("../img/ciurcuit-tablet@1x.png"), url("../img/icon-triangles.svg");
     background-repeat: no-repeat;
-    background-position: right 33%, 456px 82px;
-    background-size: auto 50%, auto 56%;
+    background-position: right 15%, 434px 10px;
+    background-size: auto 55%, auto 63%;
   }
 
   @media (max-width: $tablet-width) and (min-resolution: $retina-dpi), (max-width: $tablet-width) and (min-resolution: $retina-dppx) {
@@ -31,8 +31,8 @@
     padding-bottom: 70px;
     background-image: url("../img/ciurcuit-mobile@1x.png"), url("../img/icon-triangles.svg");
     background-repeat: no-repeat;
-    background-position: 88% 22%, 171px 76px;
-    background-size: auto 34%, auto 55%;
+    background-position: 87% 10%, 175px 78px;
+    background-size: auto 37%, auto 51%;
   }
 
   @media (max-width: $mobile-width) and (min-resolution: $retina-dpi), (max-width: $mobile-width) and (min-resolution: $retina-dppx) {

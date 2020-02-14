@@ -36,11 +36,14 @@
     margin: 0 auto;
     padding-top: 28px;
     padding-bottom: 43px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 .question img {
   padding-top: 70px;
+  //padding-left: 24px;
 
   @media (max-width: $tablet-width) {
     display: none;
